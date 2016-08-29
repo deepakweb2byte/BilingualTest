@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.preference.PreferenceManager;
+import android.view.View;
 
 import java.util.Locale;
 
@@ -27,7 +28,7 @@ public class LocaleHelper {
         return getPersistedData(context, Locale.getDefault().getLanguage());
     }
 
-    public static void setLocale(Context context, String language) {
+    public static void setLocale(View.OnClickListener context, String language) {
         persist(context, language);
         updateResources(context, language);
     }
